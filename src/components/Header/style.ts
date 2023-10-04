@@ -11,10 +11,6 @@ export const header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  ::selection {
-    background-color: var(--gray-3-opaque-1);
-  }
 `;
 
 export const div = styled.div`
