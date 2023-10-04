@@ -54,6 +54,8 @@ const data = {
   name: "Tech T-Shirt Gola V",
   reviews: 1415,
   stars: 4.8,
+  description:
+    "Tech T-shirt Gola V é nossa releitura tech da camiseta básica masculina. Feita com fibras macias que se adaptam ao corpo, acompanha seus movimentos e não esquenta. Essa t-shirt não precisa ser passada e não desbota com o tempo, é um item tecnologicamente essencial para uma rotina confortável.",
   clothes: [
     {
       id: "4261643c-47e2-43fc-b5c4-2290c7090882",
