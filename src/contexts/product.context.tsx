@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { IChildrenProps, IProductProviderProps } from "../types";
+import { IChildrenProps, IClotheProps, IProductProviderProps } from "../types";
 
 import data from "../database/product";
 
@@ -7,18 +7,20 @@ export const ProductContex = createContext<IProductProviderProps>({} as IProduct
 
 const ProductProvider = ({ children }: IChildrenProps) => {
   const [color, setColor] = useState<string>("blue");
-  const [images, setImages] = useState<string[]>([]);
+  const [size, setSize] = useState<string>("");
+  const [clotheInfo, setClotheInfo] = useState<IClotheProps>({} as IClotheProps);
 
   useEffect(() => {
     data.clothes.map((clothe) => {
       if (clothe.color === color) {
-        setImages(clothe.image);
+        setClotheInfo(clothe);
+        setSize(clothe.sizes[0].size);
       }
     });
   }, [color]);
 
   return (
-    <ProductContex.Provider value={{ color, setColor, images, setImages }}>
+    <ProductContex.Provider value={{ color, setColor, size, setSize, clotheInfo }}>
       {children}
     </ProductContex.Provider>
   );

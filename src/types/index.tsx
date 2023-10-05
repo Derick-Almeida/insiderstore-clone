@@ -14,3 +14,24 @@ export interface IStyledButtonProps {
 }
 
 export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & IStyledButtonProps;
+
+export interface IProductProviderProps {
+  color: string;
+  setColor: (e: string) => void;
+  size: string;
+  setSize: (e: string) => void;
+  clotheInfo: IClotheProps;
+}
+
+export interface IClotheProps {
+  id: string;
+  color: string;
+  hex: string;
+  price: number;
+  sizes: {
+    id: string;
+    size: string;
+    inStock: boolean;
+  }[];
+  image: string[];
+}

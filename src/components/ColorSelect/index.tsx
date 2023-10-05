@@ -9,10 +9,6 @@ const ColorSelect = () => {
 
   return (
     <div>
-      <S.span>
-        cor: <b>{color}</b>
-      </S.span>
-
       <S.ul>
         {data.clothes.map((clothe) => (
           <S.li
