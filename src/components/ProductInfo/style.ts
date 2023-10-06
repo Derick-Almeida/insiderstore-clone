@@ -5,6 +5,7 @@ export const aside = styled.aside`
   flex-direction: column;
   gap: 1rem;
   padding: 10px 3%;
+  max-width: 35%;
 
   > button {
     padding: 20px 10px;

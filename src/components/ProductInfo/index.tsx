@@ -3,9 +3,10 @@ import { useContext, useState } from "react";
 
 import data from "../../database/product";
 
-import ColorSelect from "../ColorSelect";
-import Counter from "../Counter";
 import Button from "../Button";
+import Counter from "../Counter";
+import ColorSelect from "../ColorSelect";
+import ProductCharacteristics from "../ProductCharacteristics";
 
 import { ProductContex } from "../../contexts/product.context";
 
@@ -83,6 +84,8 @@ const ProductInfo = () => {
         </S.p>
         Altura do modelo: 1,83m, tamanho: M | 40
       </S.description>
+
+      <ProductCharacteristics />
     </S.aside>
   );
 };
