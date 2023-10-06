@@ -1,47 +1,58 @@
+import { useRef, useState } from "react";
+import data from "../../database/product";
 import * as S from "./style";
-
-import product_characteristics_1 from "../../assets/product_characteristics_1.jpg";
-import product_characteristics_2 from "../../assets/product_characteristics_2.jpg";
-import product_characteristics_3 from "../../assets/product_characteristics_3.jpg";
-import product_characteristics_4 from "../../assets/product_characteristics_4.jpg";
-import product_characteristics_5 from "../../assets/product_characteristics_5.png";
-import product_characteristics_6 from "../../assets/product_characteristics_6.jpg";
 
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 const ProductCharacteristics = () => {
+  const [counter, setCounter] = useState(1);
+
+  const carousel = useRef<HTMLUListElement>(null);
+  const item = useRef<HTMLLIElement>(null);
+
+  const scrollLeft = () => {
+    if (carousel.current && item.current) {
+      if (counter > 1) {
+        setCounter(counter - 1);
+
+        carousel.current.scrollLeft -= item.current.offsetWidth;
+      }
+    }
+  };
+
+  const scrollRight = () => {
+    if (carousel.current && item.current) {
+      if (counter < data.characteristics.length - 2) {
+        setCounter(counter + 1);
+
+        carousel.current.scrollLeft += item.current.offsetWidth;
+      }
+    }
+  };
+
   return (
     <S.container>
       <S.p>Características do produto</S.p>
 
-      <SlArrowLeft />
-      <S.ul>
-        <S.li>
-          <img src={product_characteristics_1} alt="" />
-          <S.span>Anti odor</S.span>
-        </S.li>
-        <S.li>
-          <img src={product_characteristics_2} alt="" />
-          <S.span>não precisa passar</S.span>
-        </S.li>
-        <S.li>
-          <img src={product_characteristics_3} alt="" />
-          <S.span>regulação térmica</S.span>
-        </S.li>
-        <S.li>
-          <img src={product_characteristics_4} alt="" />
-          <S.span>não desbota</S.span>
-        </S.li>
-        <S.li>
-          <img src={product_characteristics_5} alt="" />
-          <S.span>leve e macia</S.span>
-        </S.li>
-        <S.li>
-          <img src={product_characteristics_6} alt="" />
-          <S.span>sustentável</S.span>
-        </S.li>
+      <span onClick={scrollLeft} style={{ opacity: counter > 1 ? 1 : 0 }}>
+        <SlArrowLeft />
+      </span>
+
+      <S.ul ref={carousel}>
+        {data.characteristics.map((char) => (
+          <S.li key={char.id} ref={item}>
+            <img src={char.image} alt="" />
+            <S.span>{char.text}</S.span>
+          </S.li>
+        ))}
       </S.ul>
-      <SlArrowRight />
+
+      <span
+        onClick={scrollRight}
+        style={{ opacity: counter < data.characteristics.length - 2 ? 1 : 0 }}
+      >
+        <SlArrowRight />
+      </span>
     </S.container>
   );
 };
