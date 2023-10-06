@@ -11,6 +11,7 @@ import { ProductContex } from "../../contexts/product.context";
 
 import { LiaRulerHorizontalSolid } from "react-icons/lia";
 import { PiCoatHangerThin } from "react-icons/pi";
+import { IoIosStar } from "react-icons/io";
 
 const ProductInfo = () => {
   const { clotheInfo, size, setSize, color } = useContext(ProductContex);
@@ -19,6 +20,21 @@ const ProductInfo = () => {
   return (
     <S.aside>
       <S.h1>{data.name}</S.h1>
+
+      <S.p>
+        <div>
+          <IoIosStar />
+          <IoIosStar />
+          <IoIosStar />
+          <IoIosStar />
+          <IoIosStar />
+        </div>
+
+        <S.span>
+          {data.stars}( {data.reviews} reviews )
+        </S.span>
+      </S.p>
+      <S.price>R$ {clotheInfo.price}</S.price>
 
       <S.span>
         cor: <b>{color}</b>
@@ -29,7 +45,7 @@ const ProductInfo = () => {
 
       <S.ul>
         {clotheInfo.sizes?.map((e) => (
-          <S.li key={e.id}>
+          <li key={e.id}>
             <Button
               variant={size === e.size ? "black" : "white"}
               in_stock={e.inStock}
@@ -40,7 +56,7 @@ const ProductInfo = () => {
             >
               {e.size}
             </Button>
-          </S.li>
+          </li>
         ))}
       </S.ul>
 
@@ -60,7 +76,13 @@ const ProductInfo = () => {
         {productInStock ? "Adicionar ao carrinho" : "avise-me quando estiver disponível"}
       </Button>
 
-      <S.p>{data.description}</S.p>
+      <S.description>
+        {data.description}
+        <S.p>
+          Composição: 92% TENCEL™ <S.span>modal e 8% elastano</S.span>
+        </S.p>
+        Altura do modelo: 1,83m, tamanho: M | 40
+      </S.description>
     </S.aside>
   );
 };

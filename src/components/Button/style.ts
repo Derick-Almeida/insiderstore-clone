@@ -8,7 +8,7 @@ export const button = styled.button<IStyledButtonProps>`
   font-size: 12px;
 
   border-radius: 5px;
-  padding: 10px;
+  padding: 12px 10px;
   border: none;
   outline: none;
 
