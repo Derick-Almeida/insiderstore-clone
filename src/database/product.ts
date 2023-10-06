@@ -74,6 +74,11 @@ const data = {
           inStock: true,
         },
         {
+          id: "af3f7859-d1f3-4b9c-913a-7c25316432cd",
+          size: "G",
+          inStock: true,
+        },
+        {
           id: "7e4e2ddf-5766-4974-93e6-6d64ab69aad6",
           size: "GG",
           inStock: true,
@@ -212,41 +217,6 @@ const data = {
         },
         {
           id: "4f897c2a-ea7a-47cb-8594-63414fea686d",
-          size: "XGG",
-          inStock: true,
-        },
-        {
-          id: "ab8a73cf-655f-4a32-8fff-3013188503ee",
-          size: "PP",
-          inStock: true,
-        },
-        {
-          id: "08e8090b-b7c7-4ab2-a858-7ead8fe3804c",
-          size: "XXGG",
-          inStock: true,
-        },
-        {
-          id: "8de65778-fbc1-4007-9c49-374bdbf8e23b",
-          size: "P",
-          inStock: true,
-        },
-        {
-          id: "507f292c-f510-4c6f-92b9-87c188ec0940",
-          size: "M",
-          inStock: true,
-        },
-        {
-          id: "09dd3090-c597-4b9e-a2eb-78084cbae927",
-          size: "G",
-          inStock: true,
-        },
-        {
-          id: "7536ddec-639a-4390-8476-b46adbe1a134",
-          size: "GG",
-          inStock: true,
-        },
-        {
-          id: "73c6ddfa-1880-463e-8515-baf48aae39b9",
           size: "XGG",
           inStock: true,
         },
