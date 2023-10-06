@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const container = styled.div`
   position: relative;
 
-  > svg {
+  > span {
     position: absolute;
     top: 50%;
     z-index: 9;
@@ -22,6 +22,8 @@ export const container = styled.div`
 export const ul = styled.ul`
   display: flex;
   overflow: hidden;
+  scroll-behavior: smooth;
+  user-select: none;
 `;
 
 export const li = styled.li`
@@ -50,4 +52,5 @@ export const p = styled.p`
 
 export const span = styled.span`
   color: var(--gray-3-opaque-2);
+  text-transform: capitalize;
 `;
