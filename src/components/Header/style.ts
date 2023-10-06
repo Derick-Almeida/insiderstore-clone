@@ -51,6 +51,7 @@ export const li = styled.li`
   font-weight: 500;
   color: var(--black);
   line-height: 30px;
+  white-space: nowrap;
 
   border: 1px solid transparent;
   margin-left: 35px;
