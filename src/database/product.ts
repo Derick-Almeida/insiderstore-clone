@@ -50,12 +50,51 @@ import graywood_color_clothes_1 from "../assets/graywood_color_clothes_1.jpg";
 import graywood_color_clothes_2 from "../assets/graywood_color_clothes_2.jpg";
 import graywood_color_clothes_3 from "../assets/graywood_color_clothes_3.jpg";
 
+import product_characteristics_1 from "../assets/product_characteristics_1.jpg";
+import product_characteristics_2 from "../assets/product_characteristics_2.jpg";
+import product_characteristics_3 from "../assets/product_characteristics_3.jpg";
+import product_characteristics_4 from "../assets/product_characteristics_4.jpg";
+import product_characteristics_5 from "../assets/product_characteristics_5.png";
+import product_characteristics_6 from "../assets/product_characteristics_6.jpg";
+
 const data = {
   name: "Tech T-Shirt Gola V",
   reviews: 1415,
   stars: 4.8,
   description:
     "Tech T-shirt Gola V é nossa releitura tech da camiseta básica masculina. Feita com fibras macias que se adaptam ao corpo, acompanha seus movimentos e não esquenta. Essa t-shirt não precisa ser passada e não desbota com o tempo, é um item tecnologicamente essencial para uma rotina confortável.",
+  characteristics: [
+    {
+      id: "c4ed400d-e060-40f8-8c0f-de2174f5de1d",
+      image: product_characteristics_1,
+      text: "anti odor",
+    },
+    {
+      id: "ce633736-0088-4aa5-b327-fde7c8bf25e0",
+      image: product_characteristics_2,
+      text: "não precisa passar",
+    },
+    {
+      id: "b954bd52-fcaf-4d68-9e61-f68dc33858eb",
+      image: product_characteristics_3,
+      text: "regulação térmica",
+    },
+    {
+      id: "637ed6a4-1ec6-4fd4-85b3-0d89a4630cd1",
+      image: product_characteristics_4,
+      text: "não desbota",
+    },
+    {
+      id: "9ac27e1b-89ec-441f-ad70-8c2f28017886",
+      image: product_characteristics_5,
+      text: "leve e macia",
+    },
+    {
+      id: "bf598bee-5c44-4e93-9b33-1421f77fdf9e",
+      image: product_characteristics_6,
+      text: "sustentável",
+    },
+  ],
   clothes: [
     {
       id: "4261643c-47e2-43fc-b5c4-2290c7090882",
