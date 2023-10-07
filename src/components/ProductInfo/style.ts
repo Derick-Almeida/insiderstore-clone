@@ -37,8 +37,14 @@ export const price = styled.p`
 
 export const ul = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 1rem;
+  max-width: 100%;
+
+  > li > button {
+    padding: 13px 15px;
+  }
 `;
 
 export const div = styled.div`
