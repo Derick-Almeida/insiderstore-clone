@@ -4,7 +4,15 @@ export const main = styled.main`
   min-width: 65%;
   max-width: 65%;
   height: fit-content;
+  position: relative;
 
+  @media (max-width: 425px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
+`;
+
+export const carousel = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 1.3rem;
@@ -17,9 +25,6 @@ export const main = styled.main`
   }
 
   @media (max-width: 425px) {
-    min-width: 100%;
-    max-width: 100%;
-
     display: flex;
     overflow: auto hidden;
     gap: 0;
@@ -81,3 +86,18 @@ export const box = styled.a`
     }
   }
 `;
+
+export const controls = styled.div`
+  position: absolute;
+  bottom: 3%;
+
+  width: 100%;
+  padding: 10px 25px;
+  color: var(--gray-3);
+  font-size: 12px;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const button = styled.span``;

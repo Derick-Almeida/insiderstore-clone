@@ -70,7 +70,7 @@ const ProductInfo = () => {
         Altura do modelo: 1,83m, tamanho: M | 40
       </S.description>
 
-      {/* <ProductCharacteristics /> */}
+      <ProductCharacteristics />
     </S.aside>
   );
 };

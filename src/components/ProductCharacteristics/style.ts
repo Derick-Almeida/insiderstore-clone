@@ -1,24 +1,5 @@
 import styled from "styled-components";
 
-export const container = styled.div`
-  position: relative;
-
-  > span {
-    position: absolute;
-    top: 50%;
-    z-index: 9;
-    cursor: pointer;
-
-    &:nth-child(2) {
-      left: -5%;
-    }
-
-    &:nth-child(4) {
-      right: -5%;
-    }
-  }
-`;
-
 export const ul = styled.ul`
   display: flex;
   overflow: hidden;
@@ -39,6 +20,7 @@ export const li = styled.li`
   > img {
     max-width: 100%;
     height: 60px;
+    object-fit: contain;
   }
 `;
 
@@ -53,4 +35,33 @@ export const p = styled.p`
 export const span = styled.span`
   color: var(--gray-3-opaque-2);
   text-transform: capitalize;
+`;
+
+export const container = styled.div`
+  position: relative;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    padding: 0 4.5%;
+  }
+`;
+
+export const controls = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+
+  position: absolute;
+  top: 40%;
+  left: -5%;
+  z-index: 9;
+
+  > span {
+    cursor: pointer;
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+    left: 0%;
+  }
 `;
