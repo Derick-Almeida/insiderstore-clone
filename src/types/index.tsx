@@ -21,6 +21,7 @@ export interface IProductProviderProps {
   size: string;
   setSize: (e: string) => void;
   clotheInfo: IClotheProps;
+  windowSize: number;
 }
 
 export interface IClotheProps {

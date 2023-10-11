@@ -15,12 +15,12 @@ import { LiaRulerHorizontalSolid } from "react-icons/lia";
 import { PiCoatHangerThin } from "react-icons/pi";
 
 const ProductInfo = () => {
-  const { clotheInfo, size, setSize, color } = useContext(ProductContex);
+  const { clotheInfo, size, setSize, color, windowSize } = useContext(ProductContex);
   const [productInStock, setProductInStock] = useState<boolean>(false);
 
   return (
     <S.aside>
-      <InitialProductInfo />
+      {windowSize > 425 && <InitialProductInfo />}
 
       <S.span>
         cor: <b>{color}</b>
@@ -65,12 +65,12 @@ const ProductInfo = () => {
       <S.description>
         {data.description}
         <S.p>
-          Composição: 92% TENCEL™ <S.span>modal e 8% elastano</S.span>
+          Composição: 92% TENCEL™ <b>modal e 8% elastano</b>
         </S.p>
         Altura do modelo: 1,83m, tamanho: M | 40
       </S.description>
 
-      <ProductCharacteristics />
+      {/* <ProductCharacteristics /> */}
     </S.aside>
   );
 };

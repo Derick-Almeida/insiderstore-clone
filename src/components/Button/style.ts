@@ -6,6 +6,8 @@ export const button = styled.button<IStyledButtonProps>`
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
+  white-space: nowrap;
+  width: 100%;
 
   border-radius: 8px;
   padding: 12px 10px;

@@ -15,6 +15,22 @@ export const main = styled.main`
     width: 100%;
     height: fit-content;
   }
+
+  @media (max-width: 425px) {
+    min-width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    overflow: auto hidden;
+    gap: 0;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 `;
 
 export const span = styled.span`
@@ -51,6 +67,14 @@ export const box = styled.a`
 
   &:hover {
     cursor: pointer;
+
+    > ${span} {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 425px) {
+    scroll-snap-align: center;
 
     > ${span} {
       opacity: 1;

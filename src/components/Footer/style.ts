@@ -7,4 +7,8 @@ export const footer = styled.footer`
   > img {
     filter: invert(1);
   }
+
+  @media (max-width: 425px) {
+    padding: 8%;
+  }
 `;
