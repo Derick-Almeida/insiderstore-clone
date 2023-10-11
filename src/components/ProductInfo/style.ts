@@ -13,11 +13,6 @@ export const aside = styled.aside`
   }
 `;
 
-export const h1 = styled.h1`
-  color: var(--gray-4);
-  font-size: 32px;
-`;
-
 export const p = styled.p`
   display: flex;
   align-items: center;
@@ -27,12 +22,6 @@ export const p = styled.p`
   > span {
     font-size: 13px;
   }
-`;
-
-export const price = styled.p`
-  font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 26px;
 `;
 
 export const ul = styled.ul`
