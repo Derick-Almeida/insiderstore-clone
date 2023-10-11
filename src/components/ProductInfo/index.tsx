@@ -1,5 +1,5 @@
 import * as S from "./style";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import data from "../../database/product";
 
@@ -17,6 +17,14 @@ import { PiCoatHangerThin } from "react-icons/pi";
 const ProductInfo = () => {
   const { clotheInfo, size, setSize, color, windowSize } = useContext(ProductContex);
   const [productInStock, setProductInStock] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (clotheInfo.sizes) {
+      setProductInStock(true);
+    } else {
+      setProductInStock(false);
+    }
+  }, [clotheInfo]);
 
   return (
     <S.aside>
