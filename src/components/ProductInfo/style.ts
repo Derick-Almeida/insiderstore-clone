@@ -4,18 +4,23 @@ export const aside = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 10px 3%;
+  padding-left: 2.5rem;
   max-width: 35%;
 
   > button {
     padding: 20px 10px;
     font-size: 14px;
   }
-`;
 
-export const h1 = styled.h1`
-  color: var(--gray-4);
-  font-size: 32px;
+  @media (max-width: 425px) {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+
+    > button {
+      padding: 15px 10px;
+    }
+  }
 `;
 
 export const p = styled.p`
@@ -29,12 +34,6 @@ export const p = styled.p`
   }
 `;
 
-export const price = styled.p`
-  font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 26px;
-`;
-
 export const ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -45,11 +44,22 @@ export const ul = styled.ul`
   > li > button {
     padding: 13px 15px;
   }
+
+  @media (max-width: 425px) {
+    gap: 10px;
+
+    > li > button {
+      padding: 10px 13px;
+    }
+  }
 `;
 
 export const div = styled.div`
-  > button ~ button {
-    margin-left: 15px;
+  display: flex;
+  gap: 15px;
+
+  @media (max-width: 425px) {
+    margin-bottom: 1rem;
   }
 `;
 
@@ -60,14 +70,22 @@ export const span = styled.span`
 `;
 
 export const description = styled.p`
-  letter-spacing: 0.5px;
-  line-height: 22px;
+  letter-spacing: 0.3px;
+  line-height: 25px;
+  font-size: 16px;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   > p {
     font-weight: 800;
     font-size: 14px;
-    white-space: nowrap;
+    display: inline-block;
 
-    margin: 20px 0;
+    > b {
+      color: var(--gray-3);
+    }
   }
 `;

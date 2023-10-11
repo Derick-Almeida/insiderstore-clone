@@ -4,7 +4,15 @@ export const main = styled.main`
   min-width: 65%;
   max-width: 65%;
   height: fit-content;
+  position: relative;
 
+  @media (max-width: 425px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
+`;
+
+export const carousel = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 1.3rem;
@@ -14,6 +22,19 @@ export const main = styled.main`
   > img {
     width: 100%;
     height: fit-content;
+  }
+
+  @media (max-width: 425px) {
+    display: flex;
+    overflow: auto hidden;
+    gap: 0;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 `;
 
@@ -56,4 +77,27 @@ export const box = styled.a`
       opacity: 1;
     }
   }
+
+  @media (max-width: 425px) {
+    scroll-snap-align: center;
+
+    > ${span} {
+      opacity: 1;
+    }
+  }
 `;
+
+export const controls = styled.div`
+  position: absolute;
+  bottom: 3%;
+
+  width: 100%;
+  padding: 10px 25px;
+  color: var(--gray-3);
+  font-size: 12px;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const button = styled.span``;

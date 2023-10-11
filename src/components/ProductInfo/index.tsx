@@ -6,36 +6,21 @@ import data from "../../database/product";
 import Button from "../Button";
 import Counter from "../Counter";
 import ColorSelect from "../ColorSelect";
+import InitialProductInfo from "../InitialProductInfo";
 import ProductCharacteristics from "../ProductCharacteristics";
 
 import { ProductContex } from "../../contexts/product.context";
 
 import { LiaRulerHorizontalSolid } from "react-icons/lia";
 import { PiCoatHangerThin } from "react-icons/pi";
-import { IoIosStar } from "react-icons/io";
 
 const ProductInfo = () => {
-  const { clotheInfo, size, setSize, color } = useContext(ProductContex);
+  const { clotheInfo, size, setSize, color, windowSize } = useContext(ProductContex);
   const [productInStock, setProductInStock] = useState<boolean>(false);
 
   return (
     <S.aside>
-      <S.h1>{data.name}</S.h1>
-
-      <S.p>
-        <div>
-          <IoIosStar />
-          <IoIosStar />
-          <IoIosStar />
-          <IoIosStar />
-          <IoIosStar />
-        </div>
-
-        <S.span>
-          {data.stars}( {data.reviews} reviews )
-        </S.span>
-      </S.p>
-      <S.price>R$ {clotheInfo.price}</S.price>
+      {windowSize > 425 && <InitialProductInfo />}
 
       <S.span>
         cor: <b>{color}</b>
@@ -80,7 +65,7 @@ const ProductInfo = () => {
       <S.description>
         {data.description}
         <S.p>
-          Composição: 92% TENCEL™ <S.span>modal e 8% elastano</S.span>
+          Composição: 92% TENCEL™ <b>modal e 8% elastano</b>
         </S.p>
         Altura do modelo: 1,83m, tamanho: M | 40
       </S.description>

@@ -27,6 +27,11 @@ export const div = styled.div`
 
 export const ul = styled.ul`
   display: flex;
+
+  &:nth-child(1) {
+    flex-wrap: wrap;
+  }
+
   align-items: center;
   padding: 2% 3.5%;
 
